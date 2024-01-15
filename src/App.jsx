@@ -34,22 +34,9 @@ const App = () => {
     { field: "firstName", headerName: "First Name", width: 150 },
     { field: "lastName", headerName: "Last Name", width: 150 },
     { field: "age", headerName: "Age", type: "number", width: 170 },
-    // { field: "edit", headerName: "Edit", width: 170 },
   ]);
 
-  const [selectionModel, setSelectionModel] = useState([]); // Add selectionModel state
-
-  const handleCellEdit = ({ id, field, value }) => {
-    const updatedRows = gridRows.map((row) =>
-      row.id === id ? { ...row, [field]: value } : row
-    );
-    setGridRows(updatedRows);
-  };
-
-  const handleSelectionModelChange = (newSelectionModel) => {
-    setSelectionModel(newSelectionModel);
-    // Handle other logic related to selection model change if needed
-  };
+  const [selectionModel, setSelectionModel] = useState([]);
 
   const handleAddColumn = () => {
     const newColumnName = prompt("Enter a new column name:");
@@ -73,8 +60,6 @@ const App = () => {
         columns={gridColumns}
         rowHeight={32}
         border={true}
-        onCellEdit={handleCellEdit}
-        onSelectionModelChange={handleSelectionModelChange}
         customColumnWidths={{
           firstName: 200,
           lastName: 200,

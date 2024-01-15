@@ -71,27 +71,12 @@ const CustomDataGrid = ({
   columns,
   rowHeight,
   border,
-  onCellEdit,
-  onSelectionModelChange,
   customColumnWidths,
   onAddColumn,
 }) => {
   const [rows, setRows] = useState(initialRows);
   const [selectionModel, setSelectionModel] = useState([]);
   const [editRowId, setEditRowId] = useState(null);
-
-  const handleSelectionModelChange = (newSelectionModel) => {
-    setSelectionModel(newSelectionModel);
-    if (onSelectionModelChange) {
-      onSelectionModelChange(newSelectionModel);
-    }
-  };
-
-  const handleCellEditCommit = ({ id, field, value }) => {
-    if (onCellEdit) {
-      onCellEdit({ id, field, value });
-    }
-  };
 
   const handleEditClick = (rowId) => {
     setEditRowId(rowId);
@@ -192,8 +177,6 @@ const CustomDataGrid = ({
         checkboxSelection
         disableSelectionOnClick
         selectionModel={selectionModel}
-        onSelectionModelChange={handleSelectionModelChange}
-        onCellEditCommit={handleCellEditCommit}
         {...(border && {
           showCellRightBorder: true,
           showCellBottomBorder: true,

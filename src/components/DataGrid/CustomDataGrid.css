@@ -35,23 +35,22 @@
 }
 
 .MuiDataGrid-cell:focus {
-  outline: none; /* Remove the border on focus */
+  outline: none;
 }
 
 .custom-data-grid-container {
-  margin: 50px auto; /* Add margin for spacing */
+  margin: 50px auto;
   width: 75%;
 }
 
 .buttons-container {
-  margin-top: 10px; /* Add margin between the table and buttons */
+  margin-top: 10px;
 }
 
 .button {
-  margin-right: 8px; /* Add margin between buttons */
+  margin-right: 8px;
 }
 
-/* Add styling for the input field used during editing */
 .custom-data-grid-container input {
   padding: 4px;
   width: 100%;
