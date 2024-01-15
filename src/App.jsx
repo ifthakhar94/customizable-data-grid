@@ -11,7 +11,6 @@ const App = () => {
     { id: 4, firstName: "John", lastName: "Doe", age: 25 },
     { id: 5, firstName: "John", lastName: "Doe", age: 25 },
   ]);
-
   const colors = {
     primary: "#1976D2",
     secondary: "#DC004E",
