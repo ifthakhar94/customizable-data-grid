@@ -1,0 +1,35 @@
+/* CustomDataGrid.css */
+
+.custom-data-grid-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.data-grid {
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
